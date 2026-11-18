@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>中韩灵感交换站｜CHINA × KOREA</title>
+<style>
+:root{--ink:#28334a;--coral:#ff735d;--cream:#fff9ef;--peach:#ffdfbd}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,"Noto Sans SC","Noto Sans KR",Arial,sans-serif}
+header,main,footer{max-width:850px;margin:auto;padding-left:20px;padding-right:20px}header{height:72px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;gap:10px;align-items:center;font-weight:900}.logo{background:var(--ink);color:white;border-radius:12px;width:40px;height:40px;display:grid;place-items:center;font-size:22px}
+nav{display:flex;gap:18px;font-size:13px;font-weight:bold}a{color:inherit;text-decoration:none}
+.hero{margin-top:12px;background:var(--peach);border:2px solid var(--ink);border-radius:26px;padding:30px;position:relative;overflow:hidden}
+.hero:after{content:"🐼";position:absolute;right:35px;bottom:5px;font-size:100px;opacity:.9}.hero h1{font-size:clamp(32px,7vw,52px);line-height:1.13;margin:15px 0}.hero p{max-width:510px;line-height:1.8;font-size:15px}
+.kicker{font-size:12px;font-weight:900;letter-spacing:2px;color:#b54f42}.btn{display:inline-block;background:var(--coral);color:white;border:2px solid var(--ink);border-radius:14px;padding:13px 19px;font-weight:900;box-shadow:0 4px 0 var(--ink);cursor:pointer}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}.stat,.panel,.result{background:white;border:1.5px solid var(--ink);border-radius:18px;padding:17px;box-shadow:0 4px 0 #e7d8c8}.stat{text-align:center;font-weight:800;font-size:13px}.stat b{display:block;font-size:27px;margin-bottom:5px}
+section{margin-top:38px;scroll-margin-top:15px}.center{text-align:center}h2{font-size:27px;margin:8px 0}.sub{font-size:13px;color:#747474}.panel{box-shadow:0 4px 0 #e7d8c8}
+label{font-weight:900;font-size:14px;display:block;margin:20px 0 10px}.choices,.tags{display:flex;flex-wrap:wrap;gap:9px}.choice,.tag{border:1.5px solid var(--ink);border-radius:30px;padding:9px 14px;background:white;cursor:pointer;font-size:13px;font-weight:750}.choice.active{background:var(--ink);color:white}.tag.active{background:#d8f0e5}
+textarea{width:100%;resize:vertical;border:1.5px solid #d6c9ba;border-radius:12px;padding:13px;background:#fffaf3;font:inherit;min-height:100px;color:var(--ink)}textarea:focus{outline:2px solid #ffb19f}
+.full{width:100%;margin-top:20px}.hint{font-size:11px;color:#888;text-align:center;margin-top:12px}
+.results{display:none}.result{margin:12px 0;box-shadow:none}.resulttop{display:flex;justify-content:space-between;font-size:12px;color:#b54f42;font-weight:900}.match{display:flex;gap:14px;align-items:center;margin:14px 0}.emoji{width:85px;height:85px;border-radius:13px;background:#f7e9d7;display:grid;place-items:center;font-size:42px;flex-shrink:0}.match h3{font-size:16px;margin:4px 0}.desc{font-size:12px;color:#666;line-height:1.6}.correspond{border-top:1px dashed #ccc;padding-top:12px;font-size:13px}
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:12px}.dark{background:var(--ink);color:white;border-radius:20px;text-align:center;padding:23px;margin:18px 0}.dark p{color:#d6d9e0;font-size:12px}
+footer{text-align:center;padding-top:25px;padding-bottom:30px;color:#888;font-size:12px;border-top:1px solid #e9dfd2;margin-top:35px}
+@media(max-width:560px){header{padding-left:15px;padding-right:15px}nav{gap:10px;font-size:11px}.hero{padding:23px 19px}.hero:after{right:8px;font-size:65px;opacity:.5}.hero p{max-width:85%}.stats{gap:7px}.stat{padding:12px 5px}.stat b{font-size:23px}.twocol{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="brand"><div class="logo">桥</div><div>中韩灵感交换站<div style="font-size:9px;letter-spacing:2px;color:#777">CHINA × KOREA</div></div></div><nav><a href="#match">开始探索</a><a href="#about">关于我们</a></nav></header>
+<main>
+<div class="hero"><div class="kicker">🇨🇳 中国 · 🇰🇷 韩国 · 青年文化交流</div><h1>世界很大<br>兴趣让我们<span style="color:#ed5f4c">相遇！</span></h1><p>从你熟悉的国家出发，发现另一个国家里与你兴趣相似的人、地方和潮流。</p><a class="btn" href="#match">寻找我的另一种可能 →</a></div>
+<div class="stats"><div class="stat"><b>🎮</b>兴趣爱好</div><div class="stat"><b>🔥</b>网络热点</div><div class="stat"><b>📍</b>旅行探索</div></div>
+<section id="match"><div class="center"><div class="kicker">DISCOVER YOUR MATCH</div><h2>找到另一个国家的你</h2><p class="sub">输入你感兴趣的内容，开启跨国匹配</p></div>
+<div class="panel">
+<label>01 / 选择你的出发国家</label><div class="choices"><button class="choice active" id="cn">🇨🇳 我来自中国</button><button class="choice" id="kr">🇰🇷 我来自韩国</button></div>
+<label>02 / 你想寻找什么？</label><div class="choices" id="cats"><button class="choice active" data-cat="全部">✨ 全部</button><button class="choice" data-cat="兴趣爱好">🎮 兴趣爱好</button><button class="choice" data-cat="网络热点">🔥 网络热点</button><button class="choice" data-cat="旅游景点">📍 旅游景点</button><button class="choice" data-cat="美食">🍜 美食</button><button class="choice" data-cat="影视动漫">🎬 影视动漫</button><button class="choice" data-cat="生活方式">🏡 生活方式</button></div>
+<label for="interest">03 / 输入你喜欢的内容</label><textarea id="interest" placeholder="例如：我喜欢足球、拍照、日式街道、咖啡馆、樱花、动漫……"></textarea>
+<div class="sub" style="margin:12px 0 8px">也可以试试这些热门关键词：</div><div class="tags" id="tags"><button class="tag">⚽ 足球</button><button class="tag">📷 摄影</button><button class="tag">🏯 历史文化</button><button class="tag">🌸 樱花</button><button class="tag">🍜 美食</button><button class="tag">🎮 游戏</button><button class="tag">🎤 K-pop</button><button class="tag">🏙️ 城市探索</button></div>
+<button class="btn full" id="search">🔍 帮我寻找另一国的相似内容</button><div class="hint">演示版使用内置示例数据；正式版可接入 AI 与实时热点来源。</div></div></section>
+<section class="results" id="results"><div class="kicker">YOUR CROSS-BORDER MATCH</div><h2>为你找到这些灵感！</h2><div id="list"></div><div class="panel" style="background:#fff0dc;margin-top:16px"><b>💌 下一站，继续探索？</b><p class="desc">一个兴趣，可以连接两个国家。把这些发现分享给朋友，一起开启中韩文化之旅吧！</p><button class="choice" onclick="document.querySelector('#match').scrollIntoView({behavior:'smooth'})">重新匹配 ↗</button></div></section>
+<section id="about"><div class="center"><div class="kicker">WHY WE CONNECT</div><h2>让文化交流更有趣</h2></div><div class="twocol"><div class="panel"><div style="font-size:32px">🐼</div><b>中国视角</b><p class="desc">发现韩国的生活方式、旅游目的地和青年潮流。</p></div><div class="panel"><div style="font-size:32px">🐯</div><b>韩国视角</b><p class="desc">发现中国的城市文化、网络热点和兴趣社群。</p></div></div><div class="dark"><div style="font-size:28px">🇨🇳　🤝　🇰🇷</div><b style="font-size:19px">不同的文化，相同的热爱。</b><p>BRIDGING YOUNG GENERATIONS</p></div></section>
+</main><footer>中韩灵感交换站 · CHINA × KOREA · 2026</footer>
+<script>
+const db=[
+{keys:['足球','体育','soccer'],cat:'兴趣爱好',cn:'中国足球文化与球迷现场',kr:'韩国K联赛与水原足球文化',desc:'寻找当地球迷文化、比赛现场、球场周边和足球旅行体验',emoji:'⚽'},
+{keys:['摄影','拍照','相机','photo'],cat:'兴趣爱好',cn:'上海外滩与城市摄影路线',kr:'首尔汉江与城市夜景摄影',desc:'城市天际线、街头光影与适合年轻人的拍摄路线',emoji:'📷'},
+{keys:['历史','文化','古迹','博物馆'],cat:'旅游景点',cn:'北京故宫与历史文化街区',kr:'首尔景福宫与北村韩屋村',desc:'宫殿建筑、历史街区、传统文化与城市记忆',emoji:'🏯'},
+{keys:['樱花','花','春天','sakura'],cat:'旅游景点',cn:'武汉大学与上海顾村公园',kr:'首尔汝矣岛与庆熙大学',desc:'春日赏花、校园散步和樱花摄影',emoji:'🌸'},
+{keys:['美食','吃','料理','餐厅'],cat:'美食',cn:'成都街头美食与火锅文化',kr:'首尔广藏市场与弘大美食街',desc:'探索年轻人喜爱的街头小吃和本地餐饮文化',emoji:'🍜'},
+{keys:['动漫','影视','电影','漫画','柯南'],cat:'影视动漫',cn:'上海动漫主题活动与影视取景地',kr:'首尔动漫商店与影视取景地',desc:'动漫周边、主题快闪和影视文化探索',emoji:'🎬'},
+{keys:['k-pop','韩流','偶像','音乐','演唱会'],cat:'兴趣爱好',cn:'上海K-pop粉丝文化与演出活动',kr:'首尔弘大音乐现场与偶像文化',desc:'年轻人的音乐社群、演出现场和潮流空间',emoji:'🎤'},
+{keys:['游戏','电竞','game'],cat:'兴趣爱好',cn:'上海电竞场馆与游戏社群',kr:'首尔电竞文化与PC房体验',desc:'电竞赛事、游戏空间和青年玩家社群',emoji:'🎮'},
+{keys:['城市','街道','建筑','咖啡','咖啡馆','city'],cat:'生活方式',cn:'上海武康路与愚园路街区',kr:'首尔延南洞与圣水洞街区',desc:'特色街道、独立咖啡馆、设计店铺与城市生活',emoji:'🏙️'},
+{keys:['购物','潮流','穿搭','时尚'],cat:'生活方式',cn:'上海安福路与淮海中路',kr:'首尔圣水洞与狎鸥亭',desc:'年轻人的穿搭潮流、设计师品牌与购物街区',emoji:'👟'},
+{keys:['海边','海岸','海岛'],cat:'旅游景点',cn:'青岛海岸与厦门鼓浪屿',kr:'釜山海云台与广安里',desc:'海滨城市、海边散步与日落摄影',emoji:'🌊'}
+];
+let country='cn',cat='全部';const $=s=>document.querySelector(s);
+function setCountry(c){country=c;$('#cn').classList.toggle('active',c==='cn');$('#kr').classList.toggle('active',c==='kr')}
+$('#cn').onclick=()=>setCountry('cn');$('#kr').onclick=()=>setCountry('kr');
+document.querySelectorAll('[data-cat]').forEach(b=>b.onclick=()=>{cat=b.dataset.cat;document.querySelectorAll('[data-cat]').forEach(x=>x.classList.toggle('active',x===b))});
+document.querySelectorAll('.tag').forEach(b=>b.onclick=()=>{b.classList.toggle('active');let v=b.textContent.replace(/^[^\p{L}\p{N}]+/u,'').trim(),a=$('#interest'),w=a.value.split(/[，,、\s]+/).filter(Boolean);if(b.classList.contains('active')){if(!w.includes(v))w.push(v)}else w=w.filter(x=>x!==v);a.value=w.join('、')});
+$('#search').onclick=()=>{let v=$('#interest').value.trim();if(!v){$('#interest').focus();return}let m=db.filter(x=>(cat==='全部'||x.cat===cat)&&x.keys.some(k=>v.toLowerCase().includes(k.toLowerCase())));if(!m.length)m=db.filter(x=>cat==='全部'||x.cat===cat).slice(0,3);if(!m.length)m=db.slice(0,3);let dest=country==='cn'?'韩国':'中国',flag=country==='cn'?'🇰🇷':'🇨🇳';$('#list').innerHTML=m.slice(0,5).map((x,i)=>`<article class="result"><div class="resulttop"><span>MATCH 0${i+1} · ${x.cat}</span><span>跨国灵感</span></div><div class="match"><div class="emoji">${x.emoji}</div><div><div class="sub">${flag} ${dest} · 推荐探索</div><h3>${country==='cn'?x.kr:x.cn}</h3><div class="desc">${x.desc}</div></div></div><div class="correspond"><b>↔ 对应灵感：</b>${country==='cn'?x.cn:x.kr}</div></article>`).join('');$('#results').style.display='block';$('#results').scrollIntoView({behavior:'smooth'})};
+</script>
+</body></html>
